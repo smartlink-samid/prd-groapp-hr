@@ -1,4 +1,4 @@
-# EPIC-000 Pengelolaan Transaksi Pembelian
+# EPIC-000 Pengelolaan Transaksi Pembelian - Ajay ganteng hari ini
 
 ## Tujuan Epic
 

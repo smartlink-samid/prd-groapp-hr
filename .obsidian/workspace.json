@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "4e40337de10347ea",
+        "id": "54510644a0082126",
         "type": "tabs",
         "children": [
           {
-            "id": "fa38b81f327938cc",
+            "id": "10467473dcc231e8",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -194,8 +194,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fa38b81f327938cc",
+  "active": "10467473dcc231e8",
   "lastOpenFiles": [
+    "epics/EPIC-001-pengelolaan-transaksi-pembelian/epic-context.md",
     "Untitled.base"
   ]
 }
