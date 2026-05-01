@@ -1,4 +1,50 @@
-# EPIC-000 Pengelolaan Transaksi Pembelian - Ajay ganteng hari ini
+# EPIC-001 Pengelolaan Transaksi Pembelian
+
+## Business Process Diagram
+
+Proses saat ini dimulai dari invoice vendor dan masih dicatat manual oleh tim finance/accounting.
+
+```mermaid
+flowchart TD
+  subgraph Vendor["Vendor"]
+    V1["Mengirim invoice"]
+    V2["Mengirim dokumen pendukung jika diminta"]
+  end
+
+  subgraph Finance["Finance / Accounting"]
+    F1["Menerima invoice dari vendor"]
+    F2["Memeriksa invoice dan dokumen pendukung"]
+    F3{"Data dan dokumen cukup?"}
+    F4["Meminta pelengkapan atau koreksi ke vendor"]
+    F5["Memeriksa detail transaksi seperti nominal, pajak, dan jatuh tempo"]
+    F6["Mencatat transaksi pembelian manual ke Excel"]
+  end
+
+  V1 --> F1 --> F2 --> F3
+  F3 -->|Tidak| F4 --> V2 --> F2
+  F3 -->|Ya| F5 --> F6
+```
+
+## Problem Statement
+
+### Narasi Inti
+
+Proses pencatatan transaksi pembelian saat ini masih dilakukan manual di Excel tanpa standar pencatatan yang seragam. Setiap pelaksana dapat menggunakan format yang berbeda, dan data pembelian juga bisa tersebar di beberapa file sehingga tidak ada single source of truth. Ditambah format invoice vendor yang tidak seragam, kondisi ini membuat proses pengecekan, pencatatan, dan penyusunan laporan menjadi lambat serta rawan inkonsistensi.
+
+### Masalah Utama
+
+- Tidak ada standar pencatatan transaksi pembelian yang konsisten.
+- Data pembelian tersebar di beberapa file sehingga tidak ada single source of truth.
+- Proses penyusunan laporan menjadi lambat karena format pencatatan dan invoice tidak seragam.
+
+### Indikasi Masalah dan Dampak
+
+| Indikasi Masalah | Dampak Bisnis / Operasional |
+| ---------------- | --------------------------- |
+| Format pencatatan berbeda antar pelaksana | Data sulit dibaca, dicek, dan dikonsolidasikan secara konsisten |
+| Data pembelian tersebar di beberapa file Excel | Risiko duplikasi, perbedaan versi data, dan tidak adanya single source of truth |
+| Format invoice vendor tidak seragam | Proses pengecekan dan input transaksi menjadi lebih lambat |
+| Pembuatan laporan membutuhkan waktu lama | Pelaporan keuangan terlambat dan kerja operasional finance menjadi tidak efisien |
 
 ## Tujuan Epic
 
