@@ -150,13 +150,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Untitled.base",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Untitled"
+              "title": "Outline"
             }
           },
           {
@@ -188,7 +187,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "103d55a06427d3ea",
+  "active": "afda5aa2fbe59234",
   "lastOpenFiles": [
     "Untitled.base"
   ]
